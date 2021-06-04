@@ -1,11 +1,11 @@
 from django.urls import path
 from .views import (
-   CreateClienteData, 
+   CreateCollaborator, 
     
 )
 
 
 
 urlpatterns = [
-    path('create_cliente/', CreateClienteData.as_view(), name='create_cliente'),
+    path('create_collaborator/', CreateCollaborator.as_view(), name='create_collaborator'),
 ]

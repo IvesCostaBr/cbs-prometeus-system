@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     
     #Myapps
     'apps.person',
+    'apps.core',
     
 ]
 
@@ -41,7 +42,7 @@ ROOT_URLCONF = 'admin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,3 +95,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'home'

@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-class ClienteDados(models.Model):
+class Collaborator(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     nome_completo = models.CharField(max_length=50)
     cpf = models.CharField(max_length=14)
