@@ -1,6 +1,7 @@
 from pathlib import Path
 from django.apps import AppConfig
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-gzi@oa5(at0s5g!&g(q9^v+f0j-$14^y!ib!lwj_wpvi@sf3k6'
@@ -14,6 +15,7 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,6 +26,10 @@ INSTALLED_APPS = [
     #Myapps
     'apps.person',
     'apps.core',
+    'apps.departament',
+    'apps.hour',
+    'apps.task',
+    'apps.company'
     
 ]
 
@@ -46,6 +52,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.request',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -82,18 +89,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 LOGIN_REDIRECT_URL = 'home'
