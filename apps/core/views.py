@@ -14,7 +14,7 @@ class Home(LoginRequiredMixin ,TemplateView):
 class Redirect(View):
     def get(self, request, *args, **kwargs):
         try:
-            self.request.user.is_staff
+            self.request.user.company
             return redirect('painel')
         except:
             return redirect('create_company')
