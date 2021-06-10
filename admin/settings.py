@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'apps.departament',
     'apps.hour',
     'apps.task',
-    'apps.company'
+    'apps.company',
+    'apps.notifications',
     
 ]
 
